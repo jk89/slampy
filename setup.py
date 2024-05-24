@@ -12,7 +12,7 @@ setup(
         'open3d'
     ], # slampy/visual_model/data/ */*.yml
     include_package_data=True,
-    package_data={'slampy': ['visual_model/data/**/*.yml']}
+    package_data={'slampy': ['visual_model/data/**/*.npy', 'visual_model/data/model/ignore.py']}
 )
 
 """

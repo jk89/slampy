@@ -5,3 +5,4 @@ open3d==0.18.0
 pyclustering==0.10.1.2
 jax==0.4.23
 numba==0.59.0
+PyQt5==5.15.10

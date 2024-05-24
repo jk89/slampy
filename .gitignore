@@ -5,3 +5,5 @@ calibration.obj
 slampy.egg-info
 build
 env
+slampy/visual_model/data/models/*
+/out*
