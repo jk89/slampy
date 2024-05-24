@@ -1,0 +1,1 @@
+recursive-include slampy/visual_model/data *.yaml

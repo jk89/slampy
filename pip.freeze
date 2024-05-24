@@ -1,0 +1,7 @@
+numpy==1.26.3
+opencv-contrib-python==4.9.0.80
+opencv-contrib-python==4.9.0.80
+open3d==0.18.0
+pyclustering==0.10.1.2
+jax==0.4.23
+numba==0.59.0
