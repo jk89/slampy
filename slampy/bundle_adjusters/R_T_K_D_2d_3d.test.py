@@ -114,7 +114,7 @@ class TestRandomParameters(unittest.TestCase):
         print("camera_frame_extrinsic_Ts shapes:", [[[T.shape if isinstance(T, np.ndarray) else T for T in Ts] for Ts in camera_frame_extrinsic_Ts]])
         print("camera_frame_map_points_2d shapes:", [[[p.shape if isinstance(p, np.ndarray) else p for p in frame] for frame in camera_frame_map_points_2d]])
         print("camera_frame_map_points_2d_3d_index shapes:", [[idx if isinstance(idx, list) else [idx] for idx in frame] for frame in camera_frame_map_points_2d_3d_index])
-        
+
         results = ba(map_points_3d, camera_intrinsic_params_Ks, camera_intrinsic_params_Ds, camera_frame_extrinsic_Rs, camera_frame_extrinsic_Ts, camera_frame_map_points_2d, camera_frame_map_points_2d_3d_index)
         
         print("results", results)

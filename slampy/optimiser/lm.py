@@ -57,8 +57,6 @@ def minimise(udf_loss_function, initial_params_estimate, args=(), epoch=3, dampi
         print("epoch", i, "-----------------------------------------------------------------------")
         
         flat_params, flat_params_meta = serialise(params)
-        
-
 
         # i think we need to wrap this bit so that we use the lm method here
         result = udf_loss_function(params, *args)
@@ -96,6 +94,8 @@ def minimise(udf_loss_function, initial_params_estimate, args=(), epoch=3, dampi
         #udf_hessian = jax.jit(udf_loss_function)(flat_params)
         udf_hessian = jax.jit(jax.hessian(lambda params: udf_loss_function(deserialise(params, flat_params_meta), *args)))(flat_params)
 
+        print("Gradient (udf_jac):", udf_jac)
+        print("Hessian (udf_hessian):", udf_hessian)
         #udf_hessian = jax.jit(jax.hessian(lambda x: udf_loss_function(deserialise(x, flat_params_meta), *args)))(flat_params)
         
         
